@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Reverse Proxy Nginx & Spring Boot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        }
+        .badge {
+            display: inline-block;
+            background: #10b981;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+        p.subtitle {
+            color: #94a3b8;
+            font-size: 15px;
+            margin-bottom: 28px;
+        }
+        .info-grid {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        .info-value {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        .status-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 10px;
+            color: #7dd3fc;
+            font-size: 14px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #22c55e;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="badge">Nginx Static Serve</span>
+        <h1>Hệ Thống Phục Vụ Trang Tĩnh & API Proxy</h1>
+        <p class="subtitle">Bài 4: Cấu hình Reverse Proxy Nginx cho ứng dụng Spring Boot</p>
+
+        <div class="info-grid">
+            <div class="info-row">
+                <span class="info-label">Họ và tên:</span>
+                <span class="info-value">Nguyễn Văn A</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Mã lớp:</span>
+                <span class="info-value">IT209 - Session 07</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Cổng lắng nghe Nginx:</span>
+                <span class="info-value">Port 80</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Backend Spring Boot:</span>
+                <span class="info-value">127.0.0.1:8082</span>
+            </div>
+        </div>
+
+        <div class="status-box">
+            <div class="dot"></div>
+            <span>Static page served directly from <code>/var/www/html/index.html</code></span>
+        </div>
+    </div>
+</body>
+</html>
